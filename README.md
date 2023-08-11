@@ -1,13 +1,10 @@
-## Project name
-
-Java/Spark Week 9/ 21: **Wildlife Tracker**
+## Wildlife Tracker
 ## Project description
+This application designed for a Forest Service.
+This solution makes it easier for stakeholders track and record details on both endangered and non-endangered.
 
 Java/Spark Week 10/ 20: **Wildlife Tracker**
 ## Author information
-This application designed for a Forest Service. 
-This solution makes it easier for stakeholders track and record details on both endangered and non-endangered.
-
 **Pharminous Nyabuto:**  
 Experienced Software Engineer focused on the delivery of quality software solutions within budget and on time.
 Strong skills in Azure DevOps, QA (Manual and Automation), QC, Mobile, Desktop and Web technologies in development, production, deployment, and post-deployment of software.
