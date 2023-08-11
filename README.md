@@ -2,8 +2,6 @@
 ## Project description
 This application designed for a Forest Service.
 This solution makes it easier for stakeholders track and record details on both endangered and non-endangered.
-
-Java/Spark Week 10/ 20: **Wildlife Tracker**
 ## Author information
 **Pharminous Nyabuto:**  
 Experienced Software Engineer focused on the delivery of quality software solutions within budget and on time.
@@ -27,8 +25,8 @@ Most recently I have been focusing on building pipelines, continuous integration
 * Clone from git: https://github.com/pmy1733/Wildlife-Tracker.git
 * Open the cloned project by (File Explorer or (CMD/Bash/Shell)
 * Create databases and tables in psql (development and test)
-* Now start the project with:   `gradle run`
-* On you browser, open this URL : localhost:4567
+* Now start the project with:   `gradle run`command .
+* On you browser, open this URL : localhost:4567, you can change the port from the project if this is already in use
 
 ## TechnologyY Stack
 * Java
