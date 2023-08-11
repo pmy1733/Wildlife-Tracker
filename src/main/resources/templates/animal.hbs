@@ -1,0 +1,27 @@
+{{#partial "title"}} {{ animal.name }} {{/partial}}
+
+{{#partial "nav-bar" }}
+  <h3 class="p-3"><a class="text-dark" style="text-decoration: none" href="/">Wildlife Tracker</a></h3>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <h3 class="navbar-brand text-light" style="font-family: 'Faster One', cursive"> {{ animal.name }} </h3>
+  </nav>
+{{/partial}}
+
+{{#partial "content"}}
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ animal.name }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted mb-1 mt-1">Animal</h6>
+      <p class="card-text">The definition of an animal is a member of the kingdom Animalia, and is typically
+        characterized by a multicellular body, specialized sense organs, voluntary movement, responses to factors
+        in the environment and the ability to acquire and digest food. A horse, lion and human are each an example
+        of an animal.</p>
+      Age: <a href="#" class="card-link blockquote-footer">{{ animal.age }}</a><br>
+      Health Status: <a href="#" class="card-link blockquote-footer">{{ animal.health }}</a><br>
+      Updated by Ranger: <a href="#" class="card-link blockquote-footer">{{ username }}</a><br>
+    </div>
+  </div>
+
+{{/partial}}
+
+{{> base.hbs}}

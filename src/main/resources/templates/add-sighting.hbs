@@ -1,0 +1,86 @@
+{{#partial "title"}} New Sighting {{/partial}}
+
+{{#partial "nav-bar" }}
+  <h3 class="p-3"><a class="text-dark" style="text-decoration: none" href="/">Wildlife Tracker</a></h3>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <h3 class="navbar-brand text-light" style="font-family: 'Faster One', cursive"> {{ animal.name }} Sighting </h3>
+  </nav>
+{{/partial}}
+
+{{#partial "content"}}
+  <div class="container-fluid mt-5">
+    <div class="row justify-content-center align-items-center">
+      <h5 class="text-dark mb-3">Animal Sighting Report Form</h5>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col col-sm-12 col-md-8 col-lg-8">
+        <form action="/animals/{{animal.id}}/add-sighting" method="post">
+          <div class="form-group">
+            <label for="name" class="text-secondary">Select the species sighted:</label>
+            <select class="form-control text-dark" name="name" id="animal-name" required>
+              <option>{{animal.name}}</option>
+            </select>
+            <br>
+
+            <!--start age-->
+            <label for="age" class="text-secondary">Select the most appropriate age:</label><br>
+            <div class="form-check-inline">
+              <label class="form-check-label" for="newborn">
+                <input type="radio" class="form-check-input" id="newborn" name="age" value="New Born">New Born
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label" for="young">
+                <input type="radio" class="form-check-input" id="young" name="age" value="Young"> Young
+              </label>
+            </div>
+            <div class="form-check-inline" for="adult">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" id="adult" name="age" value="Adult"> Adult
+              </label>
+            </div>
+            <br>
+            <br>
+            <!--end health-->
+
+            <!--start health-->
+            <label for="age" class="text-secondary">How healthy is the animal?</label><br>
+            <div class="form-check-inline">
+              <label class="form-check-label" for="healthy">
+                <input type="radio" class="form-check-input" id="healthy" name="health" value="Healthy">Healthy
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label" for="okay">
+                <input type="radio" class="form-check-input" id="okay" name="health" value="Okay"> Okay
+              </label>
+            </div>
+            <div class="form-check-inline" for="ill">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" id="ill" name="health" value="Ill"> Ill
+              </label>
+            </div>
+            <br>
+            <!--end health-->
+
+
+            <!--start location-->
+            <label for="name" class="text-secondary">Select the location sighted:</label>
+            <select class="form-control text-dark" name="location" id="location" required>
+              <option disabled></option>
+              <option>Zone A</option>
+              <option>Near the River</option>
+              <option>NE Quadrant</option>
+            </select>
+            <br>
+            <!--end location-->
+
+          </div>
+          <button class="btn btn-secondary btn-dark btn-block">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{{/partial}}
+
+{{> base.hbs}}

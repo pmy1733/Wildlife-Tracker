@@ -1,0 +1,29 @@
+{{#if username }}
+  {{#block "section" }} {{/block}}
+  {{#partial "content" }}
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1 style="font-size:60px">Welcome to wildlife tracker.</h1>
+        <h5 class="font-italic">Where we have a passion for the conservation of the environment.</h5>
+      </div>
+    </div>
+  {{/partial}}
+{{ else }}
+  {{#partial "nav-bar" }}
+    <h2 p-5>Wildlife Tracker</h2>
+  {{/partial}}
+  {{#partial "content"}}
+    <h4>Ranger Sign in</h4>
+    <form action="/" method="post">
+      <div class="form-group input-group">
+        <input type="text" class="form-control" id="username" placeholder="Enter your username" name="username"
+               required>
+        <div class="input-group-append">
+          <button class="btn btn-primary">Signin</button>
+        </div>
+      </div>
+    </form>
+  {{/partial}}
+{{/if }}
+
+{{> base.hbs}}

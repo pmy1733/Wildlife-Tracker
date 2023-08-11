@@ -1,0 +1,26 @@
+body {
+    font-family: 'Calistoga', cursive;
+}
+
+.hero-image {
+  background-image: url('/images/home-page-2.jpeg');
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.navbar ul li .disabled {
+    color: gray;
+    pointer-events: none;
+}

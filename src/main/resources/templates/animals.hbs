@@ -1,0 +1,41 @@
+{{#partial "title"}} Animals {{/partial}}
+
+{{#partial "nav-bar" }}
+  <h3 class="p-3"><a class="text-dark" style="text-decoration: none" href="/">Wildlife Tracker</a></h3>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <h3 class="navbar-brand text-light" style="font-family: 'Faster One', cursive">Wildlife</h3>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active bg-secondary text-light p-2" href="/animals">ANIMALS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="/sightings">SIGHTINGS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light disabled" href="/rangers">OUR RANGERS</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+{{/partial}}
+
+{{#partial "content"}}
+  {{#each animals}}
+    <hr class="bg-dark">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><a style="text-decoration: none" href="/animals/{{ id }}">{{ name }}</a></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Animal</h6>
+        <p class="card-text">MS wildlife tracking is a process whereby rangers can track wildlife sightings in
+          a free-ranging forest helping to manage, share, protect, analyze, and archive their data.</p>
+        <a href="/animals/{{ id }}/add-sighting" class="card-link blockquote-footer">Record Sighting</a>
+      </div>
+    </div>
+  {{/each}}
+{{/partial}}
+
+{{> base.hbs}}
